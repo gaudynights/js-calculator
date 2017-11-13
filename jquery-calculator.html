@@ -82,15 +82,43 @@ $(document).ready(function(){
 // Your code here...
 var numberA="";
 var numberB="";
+var operatorX="";
+var buttonPressed="";
 
 $(function () {
+   
+    $(".btn-primary").on('click', function () {
+
+        var buttonPressed = $(this).val();
+        console.log (buttonPressed);
+        numberA = numberA+buttonPressed;
+        console.log (numberA);  
+        $("#first-number").text(numberA);
+    });
+});
+
+$(function () {
+    $(".operator").on('click', function () {
+        var buttonPressed = $(this).val();
+        console.log (buttonPressed);
+         operatorX = buttonPressed;
+        console.log (operatorX);  
+        $("#operator").text(operatorX);
+    });
+});
+
+$(function () {
+    if (numberA.length>0 && operator!=null ){
     $(".btn-primary").on('click', function () {
         var buttonPressed = $(this).val();
         console.log (buttonPressed);
-        numberA = numberA+button;
-        console.log (numberA);  
+        numberB = numberB+buttonPressed;
+        console.log (numberB);  
+        $("#second-number").text(numberB);
     });
+}
 });
+
 
 
 });
